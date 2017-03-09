@@ -1,32 +1,16 @@
-## Welcome to GitHub Pages
+# Welcome to 67' blog
 
-You can use the [editor on GitHub](https://github.com/PsyQuentin/PsyQuentin.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+You can use the [website](https://PsyQuentin.github.io) to find me.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+And this time, I'm going to retell a story of the little prince.
 
-### Markdown
+## _Le Petit Prince_
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Chapter 1
 
-```markdown
-Syntax highlighted code block
+- Once when I was 6 years old I saw a magnificent pic in a book, called True Stories, about the primeval forest. It was a pic of a boa constrictor in the act of swallowing an animal. Here is a copy of the drawing.
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+![Image](1.jpg)
 
 ### Jekyll Themes
 
