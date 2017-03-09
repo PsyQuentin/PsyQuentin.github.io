@@ -10,12 +10,8 @@ And this time, I'm going to retell a story of the little prince.
 
 - Once when I was 6 years old I saw a magnificent pic in a book, called True Stories, about the primeval forest. It was a pic of a boa constrictor in the act of swallowing an animal. Here is a copy of the drawing.
 
-![Image](1.jpg)
+![Image](1.jpg)图片失败了！ 求助！
+### Thanks for yuor visiting!
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/PsyQuentin/PsyQuentin.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
+Your can watch the relatted movie in [IQIYI](http://www.iqiyi.com/v_19rrkcwuls.html). 
 ### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
