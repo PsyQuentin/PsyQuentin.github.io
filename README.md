@@ -1,6 +1,6 @@
 # Welcome to 67' blog
 
-You can use the [website](https://PsyQuentin.github.io) to find me.
+You can use this website [(https://PsyQuentin.github.io)](https://PsyQuentin.github.io) to find me.
 
 And this time, I'm going to retell a story of the little prince.
 
@@ -10,8 +10,14 @@ And this time, I'm going to retell a story of the little prince.
 
 - Once when I was 6 years old I saw a magnificent pic in a book, called True Stories, about the primeval forest. It was a pic of a boa constrictor in the act of swallowing an animal. Here is a copy of the drawing.
 
-![Image](1.jpg)图片失败了！ 求助！
-### Thanks for yuor visiting!
+......此处省略一些字。
 
-Your can watch the relatted movie in [IQIYI](http://www.iqiyi.com/v_19rrkcwuls.html). 
-### Support or Contact
+### _**Chapter 2**_
+
+### __Chapter 4__
+
+![Image](1.jpg)图片失败了！ 求助！
+
+Your can watch the relatted movie in [爱奇艺](http://www.iqiyi.com/v_19rrkcwuls.html). 
+
+### Thanks for yuor visiting!
