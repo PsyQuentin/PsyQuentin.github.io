@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="Keywords" content="blog"/>
+    <meta name="Description" content="blog"/>
+    <title>Simple</title>
+    <link rel="shortcut icon" href="/static/favicon.png"/>
+    <link rel="stylesheet" type="text/css" href="/main.css" />
+</head>
+<body>
+<div class="main">
+    <div class="header">
+    	<ul id="pages">
+            <li><a href="/">home</a></li>
+            <li><a href="/#/tags">tags</a></li>
+            <li><a href="/#/archive">archive</a></li>
+    	</ul>
+    </div>
+	<div class="wrap-header">
+	<h1>
+    <a href="/" id="title"></a>
+	</h1>
+	</div>
+<div id="md" style="display: none;">
+<!-- markdown -->
+
+# Welcome to 67' blog
+
+You can use this website [`(https://PsyQuentin.github.io)`](https://PsyQuentin.github.io) to find me.
+
+And this time, I'm going to retell a story of the little prince![](https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1541177815,3285060250&fm=23&gp=0.jpg).
+​
+## <font color=green size=5>__Le Petit Prince__</font>
+
+​![?](https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1771991312,3649936341&fm=23&gp=0.jpg)
+
+### Chapter 1
+
+- Once when I was 6 years old I saw a magnificent pic in a book, called True Stories, about the primeval forest. It was a pic of a boa constrictor in the act of swallowing an animal. Here is a copy of the drawing.
+
+![](http://www.xiaowangzi.org/images/xwz01.jpg)
+
+### **Chapter 2**
+
+![`帽子`还是`吞了大象的蛇`？](http://www.xiaowangzi.org/images/xwz02.jpg)
+
+You can read the whole story in[`小王子网站`](http://www.xiaowangzi.org).
+
+Your can watch the relatted movie in [`爱奇艺`](http://www.iqiyi.com/v_19rrkcwuls.html). 
+
+### Thanks for yuor visiting!
+
+
+
+
+
+
+
+
+
+
+
+<!-- markdown end -->
+</div>
+<div class="entry" id="main">
+<!-- content -->
+<h1 id="welcometo67blog">Welcome to 67' blog</h1>
+
+<p>You can use this website <a href="https://PsyQuentin.github.io"><code>(https://PsyQuentin.github.io)</code></a> to find me.</p>
+
+<p>And this time, I'm going to retell a story of the little prince<img title="" alt="" src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1541177815,3285060250&amp;fm=23&amp;gp=0.jpg">.
+​</p>
+
+<h2 id="fontcolorgreensize5__lepetitprince__font"><font color="green" size="5"><strong>Le Petit Prince</strong></font></h2>
+
+<p>​<img title="" alt="?" src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1771991312,3649936341&amp;fm=23&amp;gp=0.jpg"></p>
+
+<h3 id="chapter1">Chapter 1</h3>
+
+<ul>
+<li>Once when I was 6 years old I saw a magnificent pic in a book, called True Stories, about the primeval forest. It was a pic of a boa constrictor in the act of swallowing an animal. Here is a copy of the drawing.</li>
+</ul>
+
+<p><img title="" alt="" src="http://www.xiaowangzi.org/images/xwz01.jpg"></p>
+
+<h3 id="chapter2"><strong>Chapter 2</strong></h3>
+
+<p><img title="" alt="<code>帽子</code>还是<code>吞了大象的蛇</code>？" src="http://www.xiaowangzi.org/images/xwz02.jpg"></p>
+
+<p>You can read the whole story in<a href="http://www.xiaowangzi.org"><code>小王子网站</code></a>.</p>
+
+<p>Your can watch the relatted movie in <a href="http://www.iqiyi.com/v_19rrkcwuls.html"><code>爱奇艺</code></a>. </p>
+
+<h3 id="thanksforyuorvisiting">Thanks for yuor visiting!</h3>
+<!-- content end -->
+</div>
+<br>
+<br>
+    <div id="disqus_thread"></div>
+	<div class="footer">
+		<p>© Copyright 2014 by isnowfy, Designed by isnowfy</p>
+	</div>
+</div>
+<script src="main.js"></script>
+<script id="content" type="text/mustache">
+    <h1>{{title}}</h1>
+    <div class="tag">
+    {{date}}
+    {{#tags}}
+    <a href="/#/tag/{{name}}">#{{name}}</a>
+    {{/tags}}
+    </div>
+</script>
+<script id="pagesTemplate" type="text/mustache">
+    {{#pages}}
+    <li>
+        <a href="{{path}}">{{title}}</a>
+    </li>
+    {{/pages}}
+</script>
+<script>
+$(document).ready(function() {
+    $.ajax({
+        url: "main.json",
+        type: "GET",
+        dataType: "json",
+        success: function(data) {
+            $("#title").html(data.name);
+            var pagesTemplate = Hogan.compile($("#pagesTemplate").html());
+            var pagesHtml = pagesTemplate.render({"pages": data.pages});
+            $("#pages").append(pagesHtml);
+            //path
+            var path = "thelittleprince.html";
+            //path end
+            var now = 0;
+            for (var i = 0; i < data.posts.length; ++i)
+                if (path == data.posts[i].path)
+                    now = i;
+            var post = data.posts[now];
+            var tmp = post.tags.split(" ");
+            var tags = [];
+            for (var i = 0; i < tmp.length; ++i)
+                if (tmp[i].length > 0)
+                    tags.push({"name": tmp[i]});
+            var contentTemplate = Hogan.compile($("#content").html());
+            var contentHtml = contentTemplate.render({"title": post.title, "tags": tags, "date": post.date});
+            $("#main").prepend(contentHtml);
+            if (data.disqus_shortname.length > 0) {
+                var disqus_shortname = data.disqus_shortname;
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            }
+        }
+    });
+});
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ["\\(", "\\)"]], processEscapes: true}});
+</script>
+</body>
+</html>
